@@ -15,9 +15,9 @@ module.exports = {
     siteUrl: `https://equintanilla.dev/`,
     siteDescription: `Aspiring software engineer`,
     siteLanguage: `en`,
-    siteImage: `./src/static/banner.jpg`,
+    siteImage: `./static/banner.jpg`,
     author: `Ezekiel Quintanilla`,
-    
+
   },
   plugins: [
     {
