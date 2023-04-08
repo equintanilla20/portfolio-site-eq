@@ -13,7 +13,7 @@ module.exports = {
     siteTitleAlt: `Ezekiel Quintanilla - Portfolio`,
     siteHeadline: `Ezekiel Quintanilla - Portfolio`,
     siteUrl: `https://equintanilla.dev/`,
-    siteDescription: `Aspiring software engineer`,
+    siteDescription: `Software Developer`,
     siteLanguage: `en`,
     siteImage: `./static/banner.jpg`,
     author: `Ezekiel Quintanilla`,
