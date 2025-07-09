@@ -34,17 +34,10 @@ The portfolio is fully responsive with:
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
-1. Push your code to GitHub
-2. Connect your repository to Vercel
+### Netlify
+1. Push code to GitHub
+2. Run Netlify CI/CD
 3. Deploy automatically
-
-### Other Platforms
-The app can be deployed to any platform that supports Next.js:
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
 
 ## 📄 License
 
