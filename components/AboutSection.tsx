@@ -45,11 +45,11 @@ export default function AboutSection() {
                             </p>
                             
                             <p>
-                                Committed to continuous learning, I earned an Associate's degree in Computer Science in 2020 while working full-time, and I'm now pursuing a Master's degree at Georgia Tech.
+                                Committed to learning, I earned an Associate's degree in Computer Science in 2020 while working full-time, and I'm now pursuing a Master's degree at Georgia Tech.
                             </p>
                             
                             <p>
-                                I'm currently working as a Software Engineer at Whissle, Inc. where we are researching and developing cutting edge speech recognition and natural language processing technologies. I've contributed to both full stack development, software testing, and our cloud based CI/CD pipelines.
+                                I'm currently working as a Software Engineer at Whissle, Inc. where we are researching and developing cutting edge speech recognition and natural language processing technologies. I've contributed to full stack development, software testing, and our cloud based CI/CD pipelines.
                             </p>
                             
                             <p>
