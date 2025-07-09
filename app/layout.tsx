@@ -6,13 +6,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'EQ - Portfolio',
-  description: 'Ezekiel Quintanilla - Software Developer Portfolio',
-  keywords: ['software developer', 'portfolio', 'react', 'nextjs', 'typescript'],
+  description: 'Ezekiel Quintanilla - Software Engineer Portfolio',
+  keywords: ['software engineer', 'portfolio', 'react', 'nextjs', 'typescript'],
   authors: [{ name: 'Ezekiel Quintanilla' }],
   creator: 'Ezekiel Quintanilla',
   openGraph: {
     title: 'EQ - Portfolio',
-    description: 'Software Developer Portfolio',
+    description: 'Software Engineer Portfolio',
     url: 'https://equintanilla.dev',
     siteName: 'EQ Portfolio',
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'EQ - Portfolio',
-    description: 'Software Developer Portfolio',
+    description: 'Software Engineer Portfolio',
     images: ['/banner.jpg'],
   },
   robots: {

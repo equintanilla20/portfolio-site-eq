@@ -58,7 +58,7 @@ export default function IntroSection() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="text-xl md:text-2xl text-gray-300 mb-8"
                     >
-                        Software developer and masters student at Georgia Tech!
+                        Software engineer and masters student at Georgia Tech!
                     </motion.p>
                     
                     <motion.div
