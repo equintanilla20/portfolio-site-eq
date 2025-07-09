@@ -8,7 +8,6 @@ import { Mail, Linkedin, Github, ExternalLink } from 'lucide-react'
 export default function ContactSection() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
-
     const contactLinks = [
         {
             name: 'Email',
@@ -53,33 +52,33 @@ export default function ContactSection() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
                 >
-                {contactLinks.map((link, index) => (
-                    <motion.a
-                        key={index}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                        transition={{ duration: 0.6, delay: 0.1 * index }}
-                        whileHover={{ scale: 1.05, y: -5 }}
-                        className="group bg-secondary/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-primary/50 transition-all duration-300"
-                    >
-                        <div className="flex items-center space-x-4">
-                            <div className="p-3 bg-primary/20 rounded-lg group-hover:bg-primary/30 transition-colors duration-200">
-                                <link.icon className="w-6 h-6 text-primary" />
+                    {contactLinks.map((link, index) => (
+                        <motion.a
+                            key={index}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                            transition={{ duration: 0.6, delay: 0.1 * index }}
+                            whileHover={{ scale: 1.05, y: -5 }}
+                            className="group bg-secondary/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-primary/50 transition-all duration-300"
+                        >
+                            <div className="flex items-center space-x-4">
+                                <div className="p-3 bg-primary/20 rounded-lg group-hover:bg-primary/30 transition-colors duration-200">
+                                    <link.icon className="w-6 h-6 text-primary" />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-semibold text-white group-hover:text-primary transition-colors duration-200">
+                                        {link.name}
+                                    </h3>
+                                    <p className="text-gray-400 text-sm">
+                                        {link.description}
+                                    </p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 className="text-lg font-semibold text-white group-hover:text-primary transition-colors duration-200">
-                                    {link.name}
-                                </h3>
-                                <p className="text-gray-400 text-sm">
-                                    {link.description}
-                                </p>
-                            </div>
-                        </div>
-                    </motion.a>
-                ))}
+                        </motion.a>
+                    ))}
                 </motion.div>
 
                 <motion.div
