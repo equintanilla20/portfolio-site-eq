@@ -5,23 +5,23 @@ import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
 export default function Navigation() {
-    const [isOpen, setIsOpen] = useState(false)
-    const [scrolled, setScrolled] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50)
+            setScrolled(window.scrollY > 50);
         }
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const navItems = [
         { name: 'Home', href: '#home' },
         { name: 'About', href: '#about' },
         { name: 'Projects', href: '#projects' },
         { name: 'Contact', href: '#contact' },
-    ]
+    ];
 
     return (
         <motion.nav
@@ -33,12 +33,13 @@ export default function Navigation() {
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    <motion.div
+                    <motion.a
+                        href={"#home"}
                         whileHover={{ scale: 1.05 }}
                         className="text-2xl font-bold text-primary"
                     >
                         EQ
-                    </motion.div>
+                    </motion.a>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex space-x-8">
@@ -90,5 +91,5 @@ export default function Navigation() {
                 )}
             </div>
         </motion.nav>
-    )
-}
+    );
+};

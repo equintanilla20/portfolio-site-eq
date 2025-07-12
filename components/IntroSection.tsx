@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import Image from 'next/image'
 
 export default function IntroSection() {
     return (
@@ -42,6 +43,21 @@ export default function IntroSection() {
                     transition={{ duration: 0.8 }}
                     className="max-w-4xl mx-auto"
                 >
+                    <motion.div>
+                        <div className="flex justify-center mb-6">
+                            <div className="w-32 h-32 rounded-full border-4 border-primary shadow-lg overflow-hidden bg-secondary">
+                                <Image
+                                    src="/Profile-Picture-Techqueria.jpg"
+                                    alt="Ezekiel Quintanilla headshot"
+                                    width={128}
+                                    height={128}
+                                    className="object-cover w-full h-full"
+                                    priority
+                                />
+                            </div>
+                        </div>
+                    </motion.div>
+
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -51,7 +67,7 @@ export default function IntroSection() {
                         Hi, I'm{' '}
                         <span className="text-primary">Zeke</span>
                     </motion.h1>
-                    
+
                     <motion.p
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -98,9 +114,17 @@ export default function IntroSection() {
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                 >
-                <ChevronDown className="text-gray-400 w-6 h-6" />
+                    <ChevronDown 
+                        className="text-gray-400 w-6 h-6 hover:text-primary hover:cursor-pointer transition-transform duration-200 hover:scale-125"
+                        onClick={() => {
+                            window.scrollTo({
+                                top: window.innerHeight,
+                                behavior: 'smooth'
+                            });
+                        }}
+                    />
                 </motion.div>
             </motion.div>
         </section>
-    )
-}
+    );
+};

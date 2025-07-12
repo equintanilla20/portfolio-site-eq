@@ -13,10 +13,10 @@ export default function Footer() {
                     className="text-center"
                 >
                     <p className="text-gray-400 text-sm">
-                        © Ezekiel Quintanilla, 2025. All rights reserved.
+                        © 2025, Ezekiel Quintanilla.<br />All rights reserved.
                     </p>
                 </motion.div>
             </div>
         </footer>
-    )
-}
+    );
+};

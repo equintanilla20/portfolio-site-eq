@@ -11,48 +11,48 @@ interface ProjectCardProps {
     link: string
     bg: string
     tags: string[]
-}
+};
 
 function ProjectCard({ title, description, link, bg, tags }: ProjectCardProps) {
     return (
         <motion.div
-        whileHover={{ y: -10 }}
-        className="project-card bg-secondary/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50"
+            whileHover={{ y: -10 }}
+            className="project-card bg-secondary/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50"
         >
-        <div className="h-64 p-4 w-full rounded-lg mb-4 flex flex-col" style={{ background: bg }}>
-            <div className="flex-1">
-                <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-                <p className="text-gray-300 leading-relaxed">{description}</p>
-            </div>
-            <div className="mt-auto">
-                <div className="flex flex-wrap gap-2 mb-4">
-                    {tags.map((tag, index) => (
-                    <span
-                        key={index}
-                        className="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full"
-                    >
-                        {tag}
-                    </span>
-                    ))}
+            <div className="h-64 p-4 w-full rounded-lg mb-4 flex flex-col" style={{ background: bg }}>
+                <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+                    <p className="text-gray-300 leading-relaxed">{description}</p>
                 </div>
-                <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors duration-200"
-                >
-                    <span>View Project</span>
-                    <ExternalLink size={16} />
-                </a>
+                <div className="mt-auto">
+                    <div className="flex flex-wrap gap-2 mb-4">
+                        {tags.map((tag, index) => (
+                            <span
+                                key={index}
+                                className="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full"
+                            >
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors duration-200"
+                    >
+                        <span>View Project</span>
+                        <ExternalLink size={16} />
+                    </a>
+                </div>
             </div>
-        </div>
         </motion.div>
-    )
-}
+    );
+};
 
 export default function ProjectsSection() {
-    const ref = useRef(null)
-    const isInView = useInView(ref, { once: true })
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
 
     const projects = [
         {
@@ -83,7 +83,7 @@ export default function ProjectsSection() {
             bg: "linear-gradient(135deg, #991b1b 0%, #141821 100%)",
             tags: ["Javascript", "React", "Node", "VSCode"]
         }
-    ]
+    ];
 
     return (
         <section id="projects" ref={ref} className="section-padding">
@@ -98,7 +98,7 @@ export default function ProjectsSection() {
                         GitHub Projects
                     </h2>
                     <p className="text-xl text-gray-300">
-                        Here are some of my recent projects
+                        Check out some of my projects below!
                     </p>
                 </motion.div>
 
@@ -115,7 +115,7 @@ export default function ProjectsSection() {
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                             transition={{ duration: 0.6, delay: 0.1 * index }}
                         >
-                        <ProjectCard {...project} />
+                            <ProjectCard {...project} />
                         </motion.div>
                     ))}
                 </motion.div>
@@ -138,5 +138,5 @@ export default function ProjectsSection() {
                 </motion.div>
             </div>
         </section>
-    )
-}
+    );
+};

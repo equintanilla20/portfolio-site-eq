@@ -3,11 +3,11 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Mail, Linkedin, Github, ExternalLink } from 'lucide-react'
+import { Mail, Linkedin, Github } from 'lucide-react'
 
 export default function ContactSection() {
-    const ref = useRef(null)
-    const isInView = useInView(ref, { once: true })
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
     const contactLinks = [
         {
             name: 'Email',
@@ -27,7 +27,7 @@ export default function ContactSection() {
             icon: Github,
             description: 'Check out my GitHub'
         }
-    ]
+    ];
 
     return (
         <section id="contact" ref={ref} className="section-padding bg-secondary/50">
@@ -88,11 +88,11 @@ export default function ContactSection() {
                     className="text-center mt-12"
                 >
                     <p className="text-gray-400">
-                        I'm always open to new opportunities and collaborations. 
+                        I'm always open to new opportunities and collaborations.<br />
                         Don't hesitate to reach out!
                     </p>
                 </motion.div>
             </div>
         </section>
-    )
-}
+    );
+};
