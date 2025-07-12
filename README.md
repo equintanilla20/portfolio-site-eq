@@ -1,6 +1,6 @@
 # EQ Portfolio - Next.js Version
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Previous version was a simple and static Gatsby.js template.
 
 ## 🚀 Features
 
